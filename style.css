@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(97, 113, 146);
+}
+
+.titulo-ingreso-nota {
+    background-color: rgb(24, 23, 31);
+    width: 350px;
+}
+
+.texto-titulo-ingreso {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: rgb(230, 239, 249);
+    padding-top: 20px;
+}
+
+.contenedor-input {
+    background-color: rgb(47, 44, 61);
+    margin-bottom: 30px;
+}
+
+.texto-etiqueta-input {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(230, 239, 249);
+}
+
+.texto-aclaracion {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgb(230, 239, 249);
+    font-style: italic;
+}
+
+.input-nota {
+    height: 200px;
+    /* width: 350px; */
+}
+
+.tarjeta {
+    min-height: 129px;
+    min-width: 336px;
+    max-width: 500px;
+}
+
+.contenedor-tarjetas {
+    overflow-x: auto;
+    margin-top: 48px;
+    margin-left: 36px;
+
+}
+
+.contenedor-inputs {
+    max-width: 800px;
+}
