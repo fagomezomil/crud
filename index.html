@@ -19,22 +19,20 @@
 <body>
     <div class="d-flex">
         <div class="contenedor-inputs">
-            <div class="row mt-5 ps-5">
-                <div class="titulo-ingreso-nota ps-5">
-                    <p class="texto-titulo-ingreso">Ingresá tus anotaciones aquí</p>
-                </div>
+            <div class="mt-5 ps-5">
+                <div class="titulo-ingreso-nota ps-5">Ingresá tus anotaciones aquí</div>
                 <div class="contenedor-input ps-5">
                     <form id="form-nota">
                         <div class="texto-etiqueta-input pt-3">Titulo de la nota</div>
                         <p class="texto-aclaracion">Máxima extensión permitida es de 60 caracteres.</p>
-                        <textarea id="titulo-input" name="name" required maxlength="60"
+                        <textarea style="width: 260px;" id="titulo-input" name="name" required maxlength="60"
                             placeholder="Titulo de la nota aquí"></textarea>
                         <br>
                         <div class="texto-etiqueta-input pt-3">Cuerpo de la nota</div>
                         <p class="texto-aclaracion">Máxima extensión permitida es de 500 caracteres.</p>
-                        <textarea class="input-nota mb-4" type="text" id="nota-input" name="name" required
+                        <textarea style="width: 260px;" class="input-nota mb-4" type="text" id="nota-input" name="name" required
                             maxlength="500" placeholder="Ingrese la nota aquí"></textarea>
-                        <div><button class="btn-success mb-4" type="submit">Guardar</button></div>
+                        <div><button class="btn-success mb-4 text-boton" type="submit">Guardar</button></div>
                     </form>
                 </div>
 

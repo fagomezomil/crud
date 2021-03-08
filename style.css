@@ -1,29 +1,28 @@
 body {
-    background-color: rgb(97, 113, 146);
+    background-color: rgb(231, 231, 231);
 }
 
 .titulo-ingreso-nota {
-    background-color: rgb(24, 23, 31);
+    background-color: rgb(46, 46, 46);
     width: 350px;
-}
-
-.texto-titulo-ingreso {
     font-family: 'Lato', sans-serif;
-    font-size: 1.3rem;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
     font-weight: 700;
     color: rgb(230, 239, 249);
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .contenedor-input {
-    background-color: rgb(47, 44, 61);
+    background-color: rgb(88, 88, 88);
     margin-bottom: 30px;
 }
 
 .texto-etiqueta-input {
     font-family: 'Lato', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 800;
     color: rgb(230, 239, 249);
 }
 
@@ -40,10 +39,41 @@ body {
     /* width: 350px; */
 }
 
+.text-boton {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.83rem;
+    font-weight: 700;
+    color: rgb(230, 239, 249);
+}
+
 .tarjeta {
     min-height: 129px;
-    min-width: 336px;
+    min-width: 326px;
     max-width: 500px;
+    margin-right:  30px;
+    margin-bottom: 30px;
+}
+
+.bg-titulo {
+    background-color: rgb(71, 71, 71);
+}
+.tarjeta-titulo{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgb(230, 239, 249);
+    padding: 23px 15px;
+}
+.bg-cuerpo {
+    background-color: rgb(190, 190, 190);
+    padding: 15px;
+}
+.cuerpo-texto {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgb(88, 88, 88);
 }
 
 .contenedor-tarjetas {

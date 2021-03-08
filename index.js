@@ -42,13 +42,12 @@ function mostrarNotas() {
     for (let i = 0; i < notas.length; i++) {
         const nota = notas[i];
         const card = `
-        <div class="card tarjeta mb-4 me-4">
-            <div class="card-body">
-            <div class="bg-titulo-tarjeta">
-            <h5 class="card-title">${nota.titulo}</h5>
+        <div class="tarjeta">
+            <div class="bg-titulo">
+            <div class="tarjeta-titulo">${nota.titulo}</siv>
             </div>
-            <div class="bg-tarjeta">
-            <p class="card-text">${nota.cuerpo}</p>
+            <div class="bg-cuerpo">
+            <div class="cuerpo-texto">${nota.cuerpo}</div>
             </div>
         </div>
     </div>
