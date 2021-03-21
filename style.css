@@ -2,6 +2,10 @@ body {
     background-color: rgb(231, 231, 231);
 }
 
+input, label {
+    display: block;
+}
+
 .titulo-ingreso-nota {
     background-color: rgb(46, 46, 46);
     width: 350px;
@@ -54,6 +58,55 @@ body {
     margin-bottom: 30px;
 }
 
+.area-texto {
+    width: 100%;
+    border: 0;
+    resize: none;
+    background-color: rgb(209, 209, 209);
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgb(88, 88, 88);
+    padding: 15px;
+
+}
+
+.tipo-boton {
+    font-size: 1.3rem;
+}
+
+.espaciomodalbotonera {
+    margin-bottom: 25px;
+}
+
+.titulomodal {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ffffff ;
+    text-transform: uppercase;
+}
+
+.header-modal {
+
+    padding: 23px 15px;
+}
+
+.modal-etitulo {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgb(49, 49, 49);
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+
+.bg-modal-body {
+    background-color: #999999;
+    padding: 0px 15px 5px 15px;
+}
+
 .bg-titulo {
     background-color: rgb(71, 71, 71);
 }
@@ -68,12 +121,40 @@ body {
 .bg-cuerpo {
     background-color: rgb(190, 190, 190);
     padding: 15px;
+    padding-bottom: 60px;
+    position: relative;
 }
+
+.botonera {
+    background-color: rgb(97, 97, 97);
+    color: rgb(179, 179, 179);
+    font-size: 1.1rem;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.claro {
+    color: white;
+}
+
+.boton-close {
+    background-color: rgb(97, 97, 97);
+    color: rgb(179, 179, 179);
+    font-size: 1.1rem;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
 .cuerpo-texto {
     font-family: 'Lato', sans-serif;
     font-size: 0.8rem;
     font-weight: 700;
     color: rgb(88, 88, 88);
+    margin-bottom: 17px;
 }
 
 .contenedor-tarjetas {

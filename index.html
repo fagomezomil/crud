@@ -12,6 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="./style.css">
     <title>CRUD</title>
 </head>
@@ -30,18 +32,100 @@
                         <br>
                         <div class="texto-etiqueta-input pt-3">Cuerpo de la nota</div>
                         <p class="texto-aclaracion">Máxima extensión permitida es de 500 caracteres.</p>
-                        <textarea style="width: 260px;" class="input-nota mb-4" type="text" id="nota-input" name="name" required
-                            maxlength="500" placeholder="Ingrese la nota aquí"></textarea>
-                        <div><button class="btn-success mb-4 text-boton" type="submit">Guardar</button></div>
+                        <textarea style="width: 260px;" class="input-nota mb-4" type="text" id="nota-input" name="name"
+                            required maxlength="500" placeholder="Ingrese la nota aquí"></textarea>
+                        <div><button class="btn mb-4 " type="submit" style="border: 1px white solid;"><i class="far fa-save claro tipo-boton"></i><span class="ms-3 claro titulomodal">Guardar</span></button></div>
                     </form>
                 </div>
 
             </div>
         </div>
         <div class="d-flex flex-wrap flex-row contenedor-tarjetas" id="espacio-cards">
-            
+            <!-- <div class="tarjeta">
+                <div class="bg-titulo">
+                    <div class="tarjeta-titulo d-flex justify-content-between">
+                        <div class="">
+                            ${nota.titulo}
+                        </div>
+                        <div class="">
+                            <button type="button" class="btn-close btn-close-white btn-sm" style="text-align: right;"
+                            aria-label="Close"></button>
+                        </div>
+                        
+                    </div>
+                    <div class="bg-cuerpo">
+                        <div class="botonera">
+                            <i class="ps-3 fas fa-search-plus"></i>
+                            <i class="ps-4 fas fa-edit"></i>
+                        </div>
+                        <div class="cuerpo-texto">${nota.cuerpo}</div>
+
+                    </div>
+                </div>
+            </div> -->
         </div>
     </div>
+
+
+<!-- Modal Editar Usuario -->
+<div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header header-modal" style="background-color: rgb(71, 71, 71); border: 0;">
+          <p class="modal-title titulomodal" id="exampleModalLabel">Editar tarjeta</p>
+        </div>
+        <form id="formularioEditar">
+          <div class="modal-body bg-modal-body">
+            <label class="modal-etitulo" for="editarNombre">Editar el titulo</label>
+            <textarea class="area-texto" name="titulo" id="editarNombre" cols="30" rows="2" maxlength="75"></textarea>
+            <br>
+            <label class="modal-etitulo" for="editarContenido">Edite el contenido</label>
+            <textarea class="area-texto mb-5" name="contenido" id="editarContenido" cols="30" rows="10"></textarea>
+            br
+            <!-- <input type="text" id="editarContenido" required> -->
+          </div>
+          <!-- <div class="modal-footer bg-modal-body"> -->
+              <div class="botonera">
+                  <button class="btn" type="submit" ><i class="far fa-check-square claro tipo-boton"></i></button>
+                <button type="button" class="btn" data-bs-dismiss="modal"><i class="far fa-window-close claro tipo-boton"></i></button>
+            </div>
+            
+          <!-- </div> -->
+        </form>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal Detalle nota -->
+    <!-- <div class="modal fade" id="modalDetalle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" id="detalleNota">
+                <div class="tarjeta-modal">
+                    <div class="bg-titulo">
+                        <div class="tarjeta-titulo d-flex justify-content-between">
+                            <div class="">
+                                ${nota.titulo}
+                            </div>
+                            <div class="">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                            
+                        </div>
+                        <div class="bg-cuerpo">
+                            <div class="botonera">
+                            <button type="button" class="btn claro" data-bs-toggle="modal" data-bs-target="#modalDetalle"><i class="fas fa-edit"></i></button>
+                            <button type="button" class="btn claro ps-3" style="text-align: right;"
+                                aria-label="Close" onclick="eliminarNota('${nota.id}')"><i class="far fa-trash-alt"></i></button>
+                            </div>
+                            <div class="cuerpo-texto">${nota.cuerpo}</div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
