@@ -5,6 +5,7 @@ const cardsEspacio = document.getElementById('espacio-cards');
 const editarForm = document.getElementById('formularioEditar');
 const editarNombreInput = document.getElementById('editarNombre');
 const editarContenido = document.getElementById('editarContenido');
+const busquedaForm = document.getElementById('formBusqueda');
 const json = localStorage.getItem('notas'); // Traer de localStorage el dato asociado a la key "usuarios".
 let notas = JSON.parse(json) || []; // Convertir datos de un string JSON a código JavaScript.
 let notaId = '';
@@ -168,6 +169,9 @@ editarForm.onsubmit = function editarNota(e) {
     //     : usuario
     // );
 
+
+
+
     const json = JSON.stringify(notasModificado);
     // Guardar lista de usuarios en localStorage.
     localStorage.setItem('notas', json);
@@ -179,3 +183,36 @@ editarForm.onsubmit = function editarNota(e) {
     const modalBootstrap = bootstrap.Modal.getInstance(modalDiv);
     modalBootstrap.hide();
 };
+
+
+
+const submitBusqueda = (e) => {
+    e.preventDefault();
+    const notasLocal = JSON.parse(localStorage.getItem('notas')) || [];
+    const busquedaInput = document.getElementById('busqueda');
+    const termino = busquedaInput.value.toLowerCase();
+    const notasFiltrados = notasLocal.filter((nota) => {
+        const tituloEnMinuscula = nota.titulo.toLowerCase();
+        const cuerpoEnMinuscula = nota.cuerpo.toLowerCase();
+        return tituloEnMinuscula.includes(termino) || cuerpoEnMinuscula.includes(termino);
+    });
+    notas = notasFiltrados;
+    mostrarNotas();
+    // Condicional para mostrar u ocultar el mensaje "sin resultados".
+    // const alerta = document.getElementById('alertaBusqueda');
+    // if (usuariosFiltrados.length === 0) {
+    //     alerta.classList.remove('d-none');
+    // } else {
+    //     alerta.classList.add('d-none');
+    // }
+};
+
+const limpiarFiltro = () => {
+    notas = JSON.parse(localStorage.getItem('notas')) || [];
+    busquedaForm.reset();
+    mostrarNotas();
+    // const alerta = document.getElementById('alertaBusqueda');
+    // alerta.classList.add('d-none');
+}
+
+busquedaForm.onsubmit = submitBusqueda;

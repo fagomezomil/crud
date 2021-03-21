@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div class="d-flex">
+    <div class="d-flex position-relative">
         <div class="contenedor-inputs">
             <div class="mt-5 ps-5">
                 <div class="titulo-ingreso-nota ps-5">Ingresá tus anotaciones aquí</div>
@@ -34,13 +34,26 @@
                         <p class="texto-aclaracion">Máxima extensión permitida es de 500 caracteres.</p>
                         <textarea style="width: 260px;" class="input-nota mb-4" type="text" id="nota-input" name="name"
                             required maxlength="500" placeholder="Ingrese la nota aquí"></textarea>
-                        <div><button class="btn mb-4 " type="submit" style="border: 1px white solid;"><i class="far fa-save claro tipo-boton"></i><span class="ms-3 claro titulomodal">Guardar</span></button></div>
+                        <div><button class="btn mb-4 " type="submit" style="border: 1px white solid;"><i
+                                    class="far fa-save claro tipo-boton"></i><span
+                                    class="ms-3 claro titulomodal">Guardar</span></button></div>
                     </form>
                 </div>
 
             </div>
         </div>
+        <div class="cajita">
+            <form id="formBusqueda" class="d-flex">
+                <label for="busqueda" class="ms-4 titulomodal mt-1">Buscar</label>
+                <input id="busqueda" class="ms-3" type="text">
+                <button type="submit" class="ms-1 btn btn-sm claro"><i class="fas fa-search"></i></button>
+                <button type="button" class="ms-1 btn btn-sm claro" onclick="limpiarFiltro()"><i class="fas fa-eraser"></i></button>
+              </form>
+        </div>
+        
+
         <div class="d-flex flex-wrap flex-row contenedor-tarjetas" id="espacio-cards">
+
             <!-- <div class="tarjeta">
                 <div class="bg-titulo">
                     <div class="tarjeta-titulo d-flex justify-content-between">
@@ -67,34 +80,37 @@
     </div>
 
 
-<!-- Modal Editar Usuario -->
-<div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header header-modal" style="background-color: rgb(71, 71, 71); border: 0;">
-          <p class="modal-title titulomodal" id="exampleModalLabel">Editar tarjeta</p>
-        </div>
-        <form id="formularioEditar">
-          <div class="modal-body bg-modal-body">
-            <label class="modal-etitulo" for="editarNombre">Editar el titulo</label>
-            <textarea class="area-texto" name="titulo" id="editarNombre" cols="30" rows="2" maxlength="75"></textarea>
-            <br>
-            <label class="modal-etitulo" for="editarContenido">Edite el contenido</label>
-            <textarea class="area-texto mb-5" name="contenido" id="editarContenido" cols="30" rows="10"></textarea>
-            br
-            <!-- <input type="text" id="editarContenido" required> -->
-          </div>
-          <!-- <div class="modal-footer bg-modal-body"> -->
-              <div class="botonera">
-                  <button class="btn" type="submit" ><i class="far fa-check-square claro tipo-boton"></i></button>
-                <button type="button" class="btn" data-bs-dismiss="modal"><i class="far fa-window-close claro tipo-boton"></i></button>
+    <!-- Modal Editar Usuario -->
+    <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header header-modal" style="background-color: rgb(71, 71, 71); border: 0;">
+                    <p class="modal-title titulomodal" id="exampleModalLabel">Editar tarjeta</p>
+                </div>
+                <form id="formularioEditar">
+                    <div class="modal-body bg-modal-body">
+                        <label class="modal-etitulo" for="editarNombre">Editar el titulo</label>
+                        <textarea class="area-texto" name="titulo" id="editarNombre" cols="30" rows="2"
+                            maxlength="75"></textarea>
+                        <br>
+                        <label class="modal-etitulo" for="editarContenido">Edite el contenido</label>
+                        <textarea class="area-texto mb-5" name="contenido" id="editarContenido" cols="30"
+                            rows="10"></textarea>
+                        br
+                        <!-- <input type="text" id="editarContenido" required> -->
+                    </div>
+                    <!-- <div class="modal-footer bg-modal-body"> -->
+                    <div class="botonera">
+                        <button class="btn" type="submit"><i class="far fa-check-square claro tipo-boton"></i></button>
+                        <button type="button" class="btn" data-bs-dismiss="modal"><i
+                                class="far fa-window-close claro tipo-boton"></i></button>
+                    </div>
+
+                    <!-- </div> -->
+                </form>
             </div>
-            
-          <!-- </div> -->
-        </form>
-      </div>
+        </div>
     </div>
-  </div>
 
     <!-- Modal Detalle nota -->
     <!-- <div class="modal fade" id="modalDetalle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
